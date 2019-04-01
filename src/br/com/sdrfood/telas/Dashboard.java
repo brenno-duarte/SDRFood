@@ -22,10 +22,10 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
-        Desktop.setBorder(new BackgroundedDesktopPane());
+        /*Desktop.setBorder(new BackgroundedDesktopPane());
         this.setExtendedState(Dashboard.MAXIMIZED_BOTH);
         ImageIcon icon = new ImageIcon(this.getClass().getResource("/br/com/sdrfood/img/back.jpg"));  
-        setIconImage(icon.getImage());
+        setIconImage(icon.getImage());*/
     }
     
     private void centralizaForm(JInternalFrame frame) {
@@ -49,12 +49,18 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         menuGarcom = new javax.swing.JMenuItem();
         menuProduto = new javax.swing.JMenuItem();
+        menuGerente = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        menuComissao = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
+        menuRel = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        menuSobre = new javax.swing.JMenuItem();
         btnSair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -71,6 +77,9 @@ public class Dashboard extends javax.swing.JFrame {
             .addGap(0, 493, Short.MAX_VALUE)
         );
 
+        jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
+        jMenuBar1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jMenuBar1.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         jMenuBar1.setPreferredSize(new java.awt.Dimension(74, 30));
 
         jMenu1.setText("Cadastrar");
@@ -91,24 +100,71 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jMenu1.add(menuProduto);
 
+        menuGerente.setText("Gerente");
+        menuGerente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuGerenteActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menuGerente);
+
         jMenuBar1.add(jMenu1);
 
         jMenu3.setText("Produtos");
+
+        jMenuItem2.setText("Ver produtos");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem2);
+
         jMenuBar1.add(jMenu3);
 
         jMenu2.setText("Comissão");
+
+        menuComissao.setText("Calcular comissão");
+        menuComissao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuComissaoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(menuComissao);
+
         jMenuBar1.add(jMenu2);
 
         jMenu4.setText("Relatórios");
+
+        menuRel.setText("Relatório geral");
+        menuRel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuRelActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menuRel);
+
         jMenuBar1.add(jMenu4);
 
         jMenu5.setText("Conta");
+
+        jMenuItem3.setText("Abrir conta");
+        jMenu5.add(jMenuItem3);
+
+        jMenuItem6.setText("Contas abertas");
+        jMenu5.add(jMenuItem6);
+
         jMenuBar1.add(jMenu5);
 
         jMenu6.setText("Mais");
 
-        jMenuItem1.setText("Sobre");
-        jMenu6.add(jMenuItem1);
+        menuSobre.setText("Sobre");
+        menuSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSobreActionPerformed(evt);
+            }
+        });
+        jMenu6.add(menuSobre);
 
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +211,41 @@ public class Dashboard extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        VerProdutos prod = new VerProdutos();
+        prod.setVisible(true);
+        Desktop.add(prod);
+        centralizaForm(prod);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void menuGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuGerenteActionPerformed
+        CadGerente gerente = new CadGerente();
+        gerente.setVisible(true);
+        Desktop.add(gerente);
+        centralizaForm(gerente);
+    }//GEN-LAST:event_menuGerenteActionPerformed
+
+    private void menuComissaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuComissaoActionPerformed
+        CalcComissao com = new CalcComissao();
+        com.setVisible(true);
+        Desktop.add(com);
+        centralizaForm(com);
+    }//GEN-LAST:event_menuComissaoActionPerformed
+
+    private void menuRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRelActionPerformed
+        Relatorios rel = new Relatorios();
+        rel.setVisible(true);
+        Desktop.add(rel);
+        centralizaForm(rel);
+    }//GEN-LAST:event_menuRelActionPerformed
+
+    private void menuSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSobreActionPerformed
+        Sobre sobre = new Sobre();
+        sobre.setVisible(true);
+        Desktop.add(sobre);
+        centralizaForm(sobre);
+    }//GEN-LAST:event_menuSobreActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -200,8 +291,14 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem menuComissao;
     private javax.swing.JMenuItem menuGarcom;
+    private javax.swing.JMenuItem menuGerente;
     private javax.swing.JMenuItem menuProduto;
+    private javax.swing.JMenuItem menuRel;
+    private javax.swing.JMenuItem menuSobre;
     // End of variables declaration//GEN-END:variables
 }

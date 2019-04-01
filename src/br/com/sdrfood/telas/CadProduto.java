@@ -65,9 +65,14 @@ public class CadProduto extends javax.swing.JInternalFrame {
 
         valor.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
 
-        jButton1.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 102, 204));
+        jButton1.setFont(new java.awt.Font("Manjari Bold", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sdrfood/icones/Create.png"))); // NOI18N
         jButton1.setText("Salvar");
 
+        jComboBox1.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBox1.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--Selecione a categoria--", "Massas", "Sobremesas", "Bebidas", "Refeições" }));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sdrfood/img/comida_por_quilo_-_Diogoppr_Shutterstock.jpg"))); // NOI18N
@@ -91,11 +96,11 @@ public class CadProduto extends javax.swing.JInternalFrame {
                             .addComponent(jLabel6)
                             .addComponent(jLabel7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomeProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(porcao, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(valor, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(nomeProduto, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                            .addComponent(porcao, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                            .addComponent(valor, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
+                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap(37, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
