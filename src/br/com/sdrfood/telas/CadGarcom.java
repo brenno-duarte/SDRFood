@@ -50,35 +50,44 @@ public class CadGarcom extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/sdrfood/img/10-bandeja-redonda-inox-35-cm-para-garcom-servir-restaurante-D_NQ_NP_469711-MLB20642314378_032016-F.jpg"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Manjari Bold", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Cadastrar Garçom");
 
         jLabel3.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Nome completo");
 
         jLabel4.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Número");
 
         jLabel5.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Data de nascimento");
 
         jLabel6.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Telefone");
 
         jLabel7.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Rua");
 
         jLabel8.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Bairro");
 
         jLabel9.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("CPF");
 
         jLabel10.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Grau de escolaridade");
 
         jTextField1.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N

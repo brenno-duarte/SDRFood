@@ -22,7 +22,7 @@ public class BackgroundedDesktopPane implements Border {
 
     public BackgroundedDesktopPane() {
         try {
-            URL imagePath = new URL(getClass().getResource("/br/com/sdrfood/img/back.jpg").toString());
+            URL imagePath = new URL(getClass().getResource("/br/com/sdrfood/img/back.png").toString());
             back = ImageIO.read(imagePath);
         } catch (Exception e) {
         }

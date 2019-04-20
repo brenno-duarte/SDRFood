@@ -42,21 +42,26 @@ public class CadProduto extends javax.swing.JInternalFrame {
 
         setClosable(true);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
         jLabel1.setFont(new java.awt.Font("Manjari Bold", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Cadastrar Produto");
 
         jLabel2.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nome do produto");
 
         jLabel5.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Opções de porção");
 
         jLabel6.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Valor");
 
         jLabel7.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Categoria");
 
         nomeProduto.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N

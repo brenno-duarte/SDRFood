@@ -22,10 +22,10 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
-        /*Desktop.setBorder(new BackgroundedDesktopPane());
+        Desktop.setBorder(new BackgroundedDesktopPane());
         this.setExtendedState(Dashboard.MAXIMIZED_BOTH);
-        ImageIcon icon = new ImageIcon(this.getClass().getResource("/br/com/sdrfood/img/back.jpg"));  
-        setIconImage(icon.getImage());*/
+        ImageIcon icon = new ImageIcon(this.getClass().getResource("/br/com/sdrfood/img/back.png"));  
+        setIconImage(icon.getImage());
     }
     
     private void centralizaForm(JInternalFrame frame) {
@@ -56,8 +56,8 @@ public class Dashboard extends javax.swing.JFrame {
         menuComissao = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         menuRel = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        menuAbrirConta = new javax.swing.JMenu();
+        menuContaAberta = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         menuSobre = new javax.swing.JMenuItem();
@@ -83,7 +83,9 @@ public class Dashboard extends javax.swing.JFrame {
         jMenuBar1.setPreferredSize(new java.awt.Dimension(74, 30));
 
         jMenu1.setText("Cadastrar");
+        jMenu1.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
 
+        menuGarcom.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         menuGarcom.setText("Garçom");
         menuGarcom.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +94,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jMenu1.add(menuGarcom);
 
+        menuProduto.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         menuProduto.setText("Produtos");
         menuProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,6 +103,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jMenu1.add(menuProduto);
 
+        menuGerente.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         menuGerente.setText("Gerente");
         menuGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +115,9 @@ public class Dashboard extends javax.swing.JFrame {
         jMenuBar1.add(jMenu1);
 
         jMenu3.setText("Produtos");
+        jMenu3.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
 
+        jMenuItem2.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         jMenuItem2.setText("Ver produtos");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,7 +129,9 @@ public class Dashboard extends javax.swing.JFrame {
         jMenuBar1.add(jMenu3);
 
         jMenu2.setText("Comissão");
+        jMenu2.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
 
+        menuComissao.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         menuComissao.setText("Calcular comissão");
         menuComissao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,7 +143,9 @@ public class Dashboard extends javax.swing.JFrame {
         jMenuBar1.add(jMenu2);
 
         jMenu4.setText("Relatórios");
+        jMenu4.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
 
+        menuRel.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         menuRel.setText("Relatório geral");
         menuRel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,18 +156,33 @@ public class Dashboard extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setText("Conta");
+        menuAbrirConta.setText("Contas");
+        menuAbrirConta.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
 
-        jMenuItem3.setText("Abrir conta");
-        jMenu5.add(jMenuItem3);
+        menuContaAberta.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        menuContaAberta.setText("Abrir conta");
+        menuContaAberta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuContaAbertaActionPerformed(evt);
+            }
+        });
+        menuAbrirConta.add(menuContaAberta);
 
+        jMenuItem6.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         jMenuItem6.setText("Contas abertas");
-        jMenu5.add(jMenuItem6);
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        menuAbrirConta.add(jMenuItem6);
 
-        jMenuBar1.add(jMenu5);
+        jMenuBar1.add(menuAbrirConta);
 
         jMenu6.setText("Mais");
+        jMenu6.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
 
+        menuSobre.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         menuSobre.setText("Sobre");
         menuSobre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -166,6 +191,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jMenu6.add(menuSobre);
 
+        btnSair.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,6 +272,20 @@ public class Dashboard extends javax.swing.JFrame {
         centralizaForm(sobre);
     }//GEN-LAST:event_menuSobreActionPerformed
 
+    private void menuContaAbertaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuContaAbertaActionPerformed
+        AbrirConta conta = new AbrirConta();
+        conta.setVisible(true);
+        Desktop.add(conta);
+        centralizaForm(conta);
+    }//GEN-LAST:event_menuContaAbertaActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        ContasAbertas cAb = new ContasAbertas();
+        cAb.setVisible(true);
+        Desktop.add(cAb);
+        centralizaForm(cAb);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -288,13 +328,13 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenu menuAbrirConta;
     private javax.swing.JMenuItem menuComissao;
+    private javax.swing.JMenuItem menuContaAberta;
     private javax.swing.JMenuItem menuGarcom;
     private javax.swing.JMenuItem menuGerente;
     private javax.swing.JMenuItem menuProduto;
