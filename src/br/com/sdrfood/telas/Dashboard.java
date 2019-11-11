@@ -51,7 +51,8 @@ public class Dashboard extends javax.swing.JFrame {
         menuProduto = new javax.swing.JMenuItem();
         menuGerente = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        visProd = new javax.swing.JMenuItem();
+        visGarcom = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         menuComissao = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
@@ -114,17 +115,26 @@ public class Dashboard extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
-        jMenu3.setText("Produtos");
+        jMenu3.setText("Visualizar");
         jMenu3.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
 
-        jMenuItem2.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
-        jMenuItem2.setText("Ver produtos");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        visProd.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        visProd.setText("Produtos");
+        visProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                visProdActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem2);
+        jMenu3.add(visProd);
+
+        visGarcom.setFont(new java.awt.Font("Manjari Bold", 0, 14)); // NOI18N
+        visGarcom.setText("Garçons");
+        visGarcom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                visGarcomActionPerformed(evt);
+            }
+        });
+        jMenu3.add(visGarcom);
 
         jMenuBar1.add(jMenu3);
 
@@ -237,12 +247,12 @@ public class Dashboard extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void visProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_visProdActionPerformed
         VerProdutos prod = new VerProdutos();
         prod.setVisible(true);
         Desktop.add(prod);
         centralizaForm(prod);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_visProdActionPerformed
 
     private void menuGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuGerenteActionPerformed
         CadGerente gerente = new CadGerente();
@@ -285,6 +295,13 @@ public class Dashboard extends javax.swing.JFrame {
         Desktop.add(cAb);
         centralizaForm(cAb);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void visGarcomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_visGarcomActionPerformed
+        VisGarcons garcons = new VisGarcons();
+        garcons.setVisible(true);
+        Desktop.add(garcons);
+        centralizaForm(garcons);
+    }//GEN-LAST:event_visGarcomActionPerformed
 
     /**
      * @param args the command line arguments
@@ -330,7 +347,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenu menuAbrirConta;
     private javax.swing.JMenuItem menuComissao;
@@ -340,5 +356,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuProduto;
     private javax.swing.JMenuItem menuRel;
     private javax.swing.JMenuItem menuSobre;
+    private javax.swing.JMenuItem visGarcom;
+    private javax.swing.JMenuItem visProd;
     // End of variables declaration//GEN-END:variables
 }

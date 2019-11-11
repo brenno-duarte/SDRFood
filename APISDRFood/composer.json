@@ -1,0 +1,20 @@
+{
+    "name": "brennoDuarte/SDRFood",
+    "description": "API do sistema de restaurante",
+    "authors": [
+        {
+            "name": "Brenno Duarte de Lima",
+            "email": "brennoduarte2015@outlook.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.0",
+        "firebase/php-jwt": "^3.0",
+        "tuupola/slim-jwt-auth": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sources\\": "Sources/"
+        }
+    }
+}
